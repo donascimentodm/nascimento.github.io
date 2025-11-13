@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Daniele Nascimento – Academic Profile</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta
+    name="description"
+    content="Academic profile of Daniele Nascimento – research, publications, teaching, and contact information."
+  />
+  <style>
+    :root {
+      --bg: #f5f5f5;
+      --card-bg: #ffffff;
+      --accent: #f37021; /* OSU-ish orange */
+      --accent-dark: #d35e18;
+      --text-main: #222222;
+      --text-muted: #555555;
+      --border-soft: #e0e0e0;
+      --max-width: 1100px;
+      --radius-lg: 12px;
+      --shadow-soft: 0 4px 12px rgba(0, 0, 0, 0.06);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        sans-serif;
+      background: var(--bg);
+      color: var(--text-main);
+      line-height: 1.5;
+    }
+
+    a {
+      color: var(--accent-dark);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    header {
+      background: #ffffff;
+      border-bottom: 1px solid var(--border-soft);
+    }
+
+    .header-inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 1.2rem 1.2rem 0.8rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    .site-title {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      gap: 0.25rem;
+      align-items: flex-start;
+    }
+
+    .site-title h1 {
+      margin: 0;
+      font-size: 1.9rem;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+    }
+
+    .site-subtitle {
+      margin: 0;
+      color: var(--text-muted);
+      font-size: 0.95rem;
+    }
+
+    .top-meta {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      margin: 0.1rem 0 0;
+    }
+
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-top: 0.5rem;
+      border-top: 1px solid var(--border-soft);
+      padding-top: 0.5rem;
+    }
+
+    .nav-links a {
+      font-size: 0.88rem;
+      padding: 0.35rem 0.7rem;
+      border-radius: 999px;
+      border: 1px solid transparent;
+      background: transparent;
+    }
+
+    .nav-links a:hover {
+      border-color: var(--accent);
+      background: rgba(243, 112, 33, 0.06);
+      text-decoration: none;
+    }
+
+    .nav-links a:active {
+      background: rgba(243, 112, 33, 0.16);
+    }
+
+    main {
+      max-width: var(--max-width);
+      margin: 1.5rem auto 2rem;
+      padding: 0 1.2rem 1.2rem;
+      display: grid;
+      grid-template-columns: minmax(0, 280px) minmax(0, 1.8fr);
+      gap: 1.5rem;
+      align-items: flex-start;
+    }
+
+    .card {
+      background: var(--card-bg);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-soft);
+      padding: 1.3rem 1.4rem;
+      border: 1px solid rgba(0, 0, 0, 0.02);
+    }
+
+    .section-title {
+      font-size: 1.1rem;
+      margin: 0 0 0.75rem;
+      border-bottom: 1px solid var(--border-soft);
+      padding-bottom: 0.4rem;
+    }
+
+    .sidebar {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .profile-photo {
+      width: 110px;
+      height: 110px;
+      border-radius: 50%;
+      object-fit: cover;
+      display: block;
+      margin-bottom: 0.75rem;
+      border: 3px solid rgba(243, 112, 33, 0.3);
+      background: #ddd;
+    }
+
+    .name-block h2 {
+      margin: 0;
+      font-size: 1.3rem;
+    }
+
+    .name-block p {
+      margin: 0.2rem 0;
+      font-size: 0.95rem;
+      color: var(--text-muted);
+    }
+
+    .contact-list {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      font-size: 0.9rem;
+    }
+
+    .contact-list li + li {
+      margin-top: 0.25rem;
+    }
+
+    .label {
+      font-weight: 600;
+      color: var(--text-muted);
+      margin-right: 0.25rem;
+    }
+
+    .tag-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.35rem;
+      margin: 0.25rem 0 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .tag {
+      font-size: 0.78rem;
+      padding: 0.25rem 0.5rem;
+      border-radius: 999px;
+      border: 1px solid var(--border-soft);
+      background: #fafafa;
+      color: var(--text-muted);
+    }
+
+    .main-content {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .section-body p {
+      margin: 0 0 0.6rem;
+      font-size: 0.95rem;
+    }
+
+    .item-list {
+      margin: 0.1rem 0 0;
+      padding-left: 1.1rem;
+      font-size: 0.92rem;
+    }
+
+    .item-list li + li {
+      margin-top: 0.35rem;
+    }
+
+    .item-title {
+      font-weight: 600;
+    }
+
+    .item-meta {
+      font-size: 0.86rem;
+      color: var(--text-muted);
+    }
+
+    .pill-heading {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--accent-dark);
+    }
+
+    .pill-heading::before {
+      content: "";
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--accent);
+    }
+
+    footer {
+      max-width: var(--max-width);
+      margin: 0 auto 1.5rem;
+      padding: 0 1.2rem;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      text-align: right;
+    }
+
+    /* Responsive layout */
+    @media (max-width: 800px) {
+      main {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+
+    @media (max-width: 520px) {
+      .site-title h1 {
+        font-size: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-inner">
+      <div class="site-title">
+        <div>
+          <!-- TODO: Daniele's full name -->
+          <h1>Daniele Maria do Nascimento, Ph.D.</h1>
+          <!-- TODO: Daniele's main title / role -->
+          <p class="site-subtitle">
+            Postdoctoral Researcher · Department of Entomology and Plant Pathology
+          </p>
+          <p class="top-meta">
+            Institute for Biosecurity and Microbial Forensics (IBMF) · Oklahoma State University (OSU)
+          </p>
+        </div>
+      </div>
+
+      <nav class="nav-links" aria-label="Profile navigation">
+        <a href="#about">About</a>
+        <a href="#research">Research</a>
+        <a href="#experience">Professional Experience</a>
+        <a href="#publications">Publications</a>
+        <a href="#additional">Additional Information</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Sidebar -->
+    <aside class="sidebar" aria-label="Profile sidebar">
+      <section class="card">
+        <!-- TODO: replace src with Daniele's photo path -->
+        <img
+          src="assets/daniele-photo.jpg"
+          alt="Portrait of Daniele Nascimento"
+          class="profile-photo"
+        />
+
+        <div class="name-block">
+          <h2>Daniele Nascimento</h2>
+          <p>Postdoctoral Researcher</p>
+          <p>Department of Entomology and Plant Pathology · IBMF · OSU</p>
+        </div>
+
+        <ul class="contact-list" aria-label="Primary contact information">
+          <li>
+            <span class="label">Phone:</span>
+            <a href="tel:+14052696473">+1 (405) 269-6473</a>
+          </li>
+          <li>
+            <span class="label">Email:</span>
+            <a href="mailto:ddonasc@okstate.edu">ddonasc@okstate.edu</a>
+          </li>
+          <li>
+            <span class="label">Email (Personal):</span>
+            <a href="mailto:donascimentodm@gmail.com">donascimentodm@gmail.com</a>
+          </li>
+          <li>
+            <span class="label">Office:</span>
+            <span>130D Henry Bellmon Research Center, OSU</span>
+          </li>
+          <li>
+            <span class="label">Mailing:</span>
+            <span>127 Noble Research Center, Stillwater, OK 74078, USA</span>
+          </li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h2 class="section-title">Research Keywords</h2>
+        <ul class="tag-list">
+          <!-- TODO: customize keywords -->
+          <li class="tag">Plant pathology</li>
+          <li class="tag">HTS diagnostics</li>
+          <li class="tag">Nanopore sequencing</li>
+          <li class="tag">E-probes</li>
+          <li class="tag">Biosecurity</li>
+        </ul>
+      </section>
+
+            <section class="card">
+        <h2 class="section-title">Education</h2>
+        <ul class="item-list">
+          <li>
+            <span class="item-title">Ph.D. in Agronomy (Plant Protection)</span><br />
+            <span class="item-meta">
+              São Paulo State University (UNESP), Botucatu, SP, Brazil – 2017–2020<br />
+              Advisor: Antonio Carlos Maringoni
+            </span>
+          </li>
+          <li>
+            <span class="item-title">M.S. in Agronomy (Plant Protection)</span><br />
+            <span class="item-meta">
+              São Paulo State University (UNESP), Botucatu, SP, Brazil – 2015–2017<br />
+              Advisor: Adriana Zanin Kronka
+            </span>
+          </li>
+          <li>
+            <span class="item-title">B.Sc. in Agronomy</span><br />
+            <span class="item-meta">
+              Mato Grosso do Sul State University (UEMS), Cassilândia, MS, Brazil – 2010–2015<br />
+              Advisor: Gustavo Haralampidou da Costa Vieira
+            </span>
+          </li>
+        </ul>
+      </section>
+    </aside>
+
+    <!-- Main content -->
+    <div class="main-content">
+            <section id="about" class="card" aria-labelledby="about-title">
+        <h2 id="about-title" class="section-title">About</h2>
+        <div class="section-body">
+          <p>
+            Dr. Daniele Maria do Nascimento is a researcher who combines molecular
+            diagnostics and bioinformatics to improve plant disease surveillance
+            and reduce agricultural risk. Her work centers on developing,
+            validating, and standardizing diagnostic assays that deliver accurate,
+            actionable pathogen detection for both research and industry
+            applications.
+          </p>
+          <p>
+            She integrates computational and laboratory approaches—including NGS
+            (next-generation sequencing) data analysis, metagenomics, and targeted
+            assay design—to produce robust, field-relevant diagnostic solutions.
+            Dr. Nascimento also builds resources and workflows that help labs
+            adopt reproducible, validated testing pipelines.
+          </p>
+          <p>
+            <strong>Expertise:</strong> molecular diagnostics; assay development
+            and validation; NGS and metagenomic analysis; pathogen identification;
+            diagnostic standardization; translational bioinformatics.
+          </p>
+        </div>
+      </section>
+
+            <section id="research" class="card" aria-labelledby="research-title">
+        <h2 id="research-title" class="section-title">Research Interests</h2>
+        <div class="section-body">
+          <p>
+            <strong>Interests:</strong> Plant Pathology, Seed Pathology, Microbial
+            Ecology, Bacteriology, Bioinformatics, Molecular diagnostics,
+            high-throughput sequencing (HTS) technologies, and diagnostic
+            solutions for agriculture.
+          </p>
+        </div>
+      </section>
+
+                  <section id="experience" class="card" aria-labelledby="experience-title">
+        <h2 id="experience-title" class="section-title">Professional Experience</h2>
+        <div class="section-body">
+          <ul class="item-list">
+            <li>
+              <span class="item-title">Postdoctoral Researcher, Department of Entomology and Plant Pathology</span><br />
+              <span class="item-meta">Oklahoma State University (OSU), Stillwater, OK, USA · 2024–Present</span>
+              <ul class="item-list">
+                <li>Developing, validating, and standardizing diagnostic assays for plant pathogen detection.</li>
+                <li>Specializing in molecular diagnostics, assay development, and plant pathogen surveillance.</li>
+                <li>Building resources and tools to ensure accurate and reliable disease detection.</li>
+              </ul>
+            </li>
+
+            <li>
+              <span class="item-title">Postdoctoral Fellow, Department of Plant Protection</span><br />
+              <span class="item-meta">São Paulo State University (UNESP), Botucatu, SP, Brazil · 2023–2024</span>
+              <ul class="item-list">
+                <li>Studied the ecology of <em>Xanthomonas perforans</em>, causal agent of bacterial leaf spot in tomatoes.</li>
+                <li>Investigated potential alternative hosts for <em>Xanthomonas perforans</em> in crop fields.</li>
+              </ul>
+            </li>
+
+            <li>
+              <span class="item-title">Consultant, PFI MiFi for Citrus Project</span><br />
+              <span class="item-meta">University of California Riverside (UCR) &amp; Oklahoma State University (OSU), Remote · 2023–2024</span>
+              <ul class="item-list">
+                <li>Developed and curated e-probes for detection of citrus pathogens.</li>
+                <li>Supported deployment and beta testing of the MiFi platform (mifi.tech) for citrus diagnostics.</li>
+                <li>Analyzed diagnostic data and prepared technical reports.</li>
+              </ul>
+            </li>
+
+            <li>
+              <span class="item-title">Postdoctoral Researcher, Department of Entomology and Plant Pathology</span><br />
+              <span class="item-meta">Oklahoma State University (OSU), Stillwater, OK, USA · 2022</span>
+              <ul class="item-list">
+                <li>Developed e-probes for pathogen detection in citrus.</li>
+                <li>Performed molecular diagnostics and high-throughput sequencing (HTS)–based pathogen discovery.</li>
+              </ul>
+            </li>
+          </ul>
+
+          <p class="pill-heading">Earlier roles (summary)</p>
+          <ul class="item-list">
+            <li>
+              <span class="item-title">Professor of Weed Science</span> – Universidade Federal de Lavras (UFLA), Minas Gerais, Brazil (2022)
+            </li>
+            <li>
+              <span class="item-title">Volunteer Researcher</span> – Institute for Biosecurity and Microbial Forensics, Oklahoma State University (OSU), Stillwater, OK, USA (2021)
+            </li>
+            <li>
+              <span class="item-title">Graduate Student Research Assistant (Ph.D. &amp; M.S.) – Bacteriology</span> – São Paulo State University (UNESP), Botucatu, SP, Brazil (2015–2020)
+            </li>
+            <li>
+              <span class="item-title">Teaching roles in Phytopathology and Microbiology</span> – Professor Trainee &amp; Scholarship Professor, UNESP (2017–2019)
+            </li>
+            <li>
+              <span class="item-title">Researcher &amp; Extension roles</span> – Mato Grosso do Sul State University (UEMS), Cassilândia, MS, Brazil (2012–2014), focusing on disease control in soybean seeds and mastitis diagnosis and treatment in rural properties.
+            </li>
+          </ul>
+        </div>
+      </section>
+
+            <section id="publications" class="card" aria-labelledby="pubs-title">
+        <h2 id="pubs-title" class="section-title">Publications</h2>
+        <div class="section-body">
+          <p>
+            For a complete and current list of publications, see Dr. Nascimento's
+            <a href="https://scholar.google.com/citations?user=ShRBAVgAAAAJ&amp;hl=en" target="_blank" rel="noopener">Google Scholar profile</a>.
+          </p>
+        </div>
+      </section>
+
+            <section id="additional" class="card" aria-labelledby="additional-title">
+        <h2 id="additional-title" class="section-title">Additional Information</h2>
+        <div class="section-body">
+          <p>
+            <strong>Languages:</strong> Portuguese (native), English (fluent)
+          </p>
+        </div>
+      </section>
+
+            <section id="contact" class="card" aria-labelledby="contact-title">
+        <h2 id="contact-title" class="section-title">Contact</h2>
+        <div class="section-body">
+          <p>
+            For collaboration, student opportunities, or questions about ongoing
+            projects, please reach out via email or phone.
+          </p>
+          <ul class="contact-list">
+            <li>
+              <span class="label">Phone:</span>
+              <a href="tel:+14052696473">+1 (405) 269-6473</a>
+            </li>
+            <li>
+              <span class="label">Email:</span>
+              <a href="mailto:ddonasc@okstate.edu">ddonasc@okstate.edu</a>
+              <span> · </span>
+              <a href="mailto:donascimentodm@gmail.com">donascimentodm@gmail.com</a>
+            </li>
+            <li>
+              <span class="label">Office:</span>
+              <span>130D Henry Bellmon Research Center, OSU</span>
+            </li>
+            <li>
+              <span class="label">Mailing:</span>
+              <span>127 Noble Research Center, Stillwater, OK 74078, USA</span>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <span>&copy; 2025 Daniele Nascimento. All rights reserved.</span>
+  </footer>
+</body>
+</html>
